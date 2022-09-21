@@ -1,7 +1,20 @@
-import { NavbarContainer } from "./navbar.styles";
+import {
+  NavbarContainer,
+  ContentContainer,
+  Decoration,
+  Logo,
+} from "./navbar.styles";
 
 const Navbar = () => {
-  return <NavbarContainer></NavbarContainer>;
+  return (
+    <NavbarContainer>
+      <ContentContainer>
+        <Decoration />
+        <Logo></Logo>
+        <Decoration />
+      </ContentContainer>
+    </NavbarContainer>
+  );
 };
 
 export default Navbar;
