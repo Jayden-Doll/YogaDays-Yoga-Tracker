@@ -10,7 +10,7 @@ const Navbar = () => {
     <NavbarContainer>
       <ContentContainer>
         <Decoration />
-        <Logo></Logo>
+        <Logo to="/">YogaDays</Logo>
         <Decoration />
       </ContentContainer>
     </NavbarContainer>

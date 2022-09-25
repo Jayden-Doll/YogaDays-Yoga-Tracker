@@ -12,7 +12,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />}></Route>
-        <Route path="/day" element={<Day />}></Route>
+        <Route path="/day">
+          <Route path=":day" element={<Day />}></Route>
+        </Route>
       </Routes>
       <Footer />
     </>

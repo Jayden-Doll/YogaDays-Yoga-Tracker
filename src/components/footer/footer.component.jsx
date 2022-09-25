@@ -10,7 +10,7 @@ const Footer = () => {
     <FooterContainer>
       <ContentContainer>
         <Decoration />
-        <CopyrightInfo></CopyrightInfo>
+        <CopyrightInfo> @ 2022 YogaDays</CopyrightInfo>
         <Decoration />
       </ContentContainer>
     </FooterContainer>

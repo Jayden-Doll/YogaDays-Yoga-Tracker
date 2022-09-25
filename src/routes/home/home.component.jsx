@@ -1,10 +1,13 @@
-import { Title } from "./home.styles";
+import YogaCalendar from "../../components/yoga-calendar/yoga-calendar.component";
+
+import { Wrapper, PageDecoration } from "./home.styles";
 
 const Home = () => {
   return (
-    <div>
-      <Title>Home Route</Title>
-    </div>
+    <Wrapper>
+      <PageDecoration />
+      <YogaCalendar />
+    </Wrapper>
   );
 };
 

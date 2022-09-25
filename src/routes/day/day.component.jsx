@@ -1,9 +1,16 @@
-import { Title } from "./day.styles";
+import { useParams } from "react-router";
+
+import { Title, Wrapper } from "./day.styles";
 
 const Day = () => {
+  const { day } = useParams();
+  const pageDate = day.replaceAll("-", "/");
+
   return (
     <div>
-      <Title>Day Route</Title>
+      <Wrapper>
+        <Title>{`${pageDate}`}</Title>
+      </Wrapper>
     </div>
   );
 };

@@ -1,5 +1,25 @@
+html {
+  font-size: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: white;
+  background-color: #333333;
+}
+
 body {
-  margin: 0 auto;
+  position: relative;
+  margin: 0;
+  padding: 5rem 4rem;
+
+  min-width: 100%;
+  min-height: calc(100vh - 10rem);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -8,5 +28,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  min-height: calc(100vh - 7rem);
+  background-color: #e4dac1;
+  color: #333333;
+
+  font-family: "Cutive Mono";
 }
