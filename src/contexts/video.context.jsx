@@ -6,7 +6,11 @@ export const VideoProvider = ({ children }) => {
   const [video, setVideo] = useState("");
   const [videoIsCompleted, setVideoIsCompleted] = useState(false);
 
-  return <VideoContext.Provider value={{}}>{children}</VideoContext.Provider>;
+  const value = { video, setVideo, videoIsCompleted, setVideoIsCompleted };
+
+  return (
+    <VideoContext.Provider value={value}>{children}</VideoContext.Provider>
+  );
 };
 
 export default VideoContext;
