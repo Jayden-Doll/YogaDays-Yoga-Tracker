@@ -29,7 +29,8 @@ export const Logo = styled(Link)`
 `;
 
 export const Decoration = styled.div`
-  width: 38%;
+  width: 40%;
+  min-width: 10%;
   height: 1px;
 
   background-color: #333;

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Calendar } from "react-calendar";
 
-import { DateStatus, Status, Wrapper } from "./yoga-calendar.styles";
+import { Wrapper } from "./yoga-calendar.styles";
 
 const YogaCalendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -39,17 +39,13 @@ const YogaCalendar = () => {
     <Wrapper>
       <Calendar
         onChange={onClickDayHandler}
-        showNeighboringMonth="false"
-        view="day"
+        showNeighboringMonth={false}
+        view="month"
         calendarType="US"
         maxDate={currentDate}
         showFixedNumberOfWeeks={true}
         value={selectedDate}
       />
-      <DateStatus>
-        <Status>Current Date: {currentDate.toDateString()}</Status>
-        <Status>Selected Date: {selectedDate.toDateString()}</Status>
-      </DateStatus>
     </Wrapper>
   );
 };

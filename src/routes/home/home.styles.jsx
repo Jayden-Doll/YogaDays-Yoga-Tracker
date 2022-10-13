@@ -9,7 +9,9 @@ export const Wrapper = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 10rem;
+  flex-wrap: wrap-reverse;
+  gap: 8rem;
+  padding: 4rem 0;
 `;
 
 export const PageDecoration = styled(MoonImage)``;

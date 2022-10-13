@@ -7,7 +7,7 @@ export const Wrapper = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 10rem;
+  flex-direction: column;
 `;
 
 export const Title = styled.h1`

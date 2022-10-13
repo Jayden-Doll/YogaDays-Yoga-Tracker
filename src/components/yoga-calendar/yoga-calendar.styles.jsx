@@ -2,19 +2,6 @@ import "react-calendar/dist/Calendar.css";
 
 import styled from "styled-components";
 
-export const Status = styled.span`
-  font-size: 1.5rem;
-  color: #333;
-`;
-
-export const DateStatus = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 2rem;
-`;
-
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
