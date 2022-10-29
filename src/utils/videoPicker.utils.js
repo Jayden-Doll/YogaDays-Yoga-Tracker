@@ -5,7 +5,7 @@ const pickRandomVideo = (array) => {
   };
   const randomNumber = getRandomNumber();
   const selectedVideo = array[randomNumber];
-  return selectedVideo;
+  return selectedVideo.videoId;
 };
 
 export default pickRandomVideo;
