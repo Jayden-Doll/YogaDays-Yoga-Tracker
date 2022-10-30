@@ -50,7 +50,7 @@ const YogaCalendar = () => {
         showFixedNumberOfWeeks={true}
         value={selectedDate}
         tileClassName={({ date }) => {
-          const result = Object.entries(parsedLocalStorageData);
+          const result = Object.entries({ parsedLocalStorageData });
 
           const makeNewDate = () => {
             return date.getDate().toLocaleString().replaceAll("/", "");
