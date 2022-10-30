@@ -113,4 +113,8 @@ export const Wrapper = styled.div`
   .react-calendar--selectRange .react-calendar__tile--hover {
     background-color: transparent;
   }
+
+  .day-complete {
+    background-color: #859e7e !important;
+  }
 `;

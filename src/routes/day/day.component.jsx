@@ -140,15 +140,14 @@ const Day = () => {
         <VideoContainer>
           <Video
             url={`https://www.youtube.com/watch?v=${currentVideoID}`}
-            //Make videoID set to currentVideoStatus on load for new and existing data
             onEnded={onVideoEndHandler}
             controls={true}
           />
           <ButtonContainer>
-            <ButtonLink>
+            <ButtonLink to="/">
               <BackButton>
                 <AngleLeftIcon />
-                <ButtonText>Back To Home</ButtonText>
+                <ButtonText>Back To Calendar</ButtonText>
               </BackButton>
             </ButtonLink>
           </ButtonContainer>

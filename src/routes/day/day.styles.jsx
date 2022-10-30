@@ -81,10 +81,34 @@ export const Video = styled(ReactPlayer)`
   -moz-box-shadow: 10px 8px 26px 0px rgba(79, 66, 44, 0.49);
 `;
 
-export const ButtonContainer = styled.div``;
+export const ButtonContainer = styled.div`
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+`;
 
-export const BackButton = styled.button``;
+export const BackButton = styled.button`
+  width: auto;
+  height: 3rem;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.75rem;
+  font-family: "Cutive Mono";
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  :hover {
+    text-decoration: 1px underline #333;
+    text-underline-offset: 8px;
+  }
+`;
 
 export const ButtonText = styled.p``;
 
-export const ButtonLink = styled(Link)``;
+export const ButtonLink = styled(Link)`
+  text-decoration: none;
+`;

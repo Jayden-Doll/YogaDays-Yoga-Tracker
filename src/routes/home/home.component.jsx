@@ -17,7 +17,6 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.log(pageDate);
     setPageData(localStorage.getItem("PAGE_DATA_STORE"));
     if (!localStorage.getItem("PAGE_DATA_STORE")) {
       storageCheck();
