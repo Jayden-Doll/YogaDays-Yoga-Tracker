@@ -88,7 +88,6 @@ const Day = () => {
 
   const storeNewData = (objectData) => {
     localStorage.setItem("PAGE_DATA_STORE", objectData);
-    console.log("Set local storage");
   };
 
   const loadExistingPageData = (parsedData) => {
@@ -106,14 +105,12 @@ const Day = () => {
   useEffect(() => {
     const parsedLocalStorageData = getParsedLocalStorageData();
     if (!parsedLocalStorageData[pageDate]) {
-      console.log("No data found, creating data");
       const newPageDataObject = newPageData(
         parsedLocalStorageData,
         randomVideo
       );
       storeNewData(newPageDataObject);
     } else if (parsedLocalStorageData[pageDate]) {
-      console.log("Loading existing data from localStorage");
       loadExistingPageData(parsedLocalStorageData);
     }
 

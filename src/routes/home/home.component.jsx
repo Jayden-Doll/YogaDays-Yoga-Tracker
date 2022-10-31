@@ -12,7 +12,6 @@ const Home = () => {
 
   const storageCheck = () => {
     localStorage.setItem("PAGE_DATA_STORE", pageData);
-    console.log("Set local storage for first time");
   };
 
   useEffect(() => {
