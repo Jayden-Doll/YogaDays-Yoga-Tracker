@@ -32,6 +32,20 @@ const YogaCalendar = () => {
     setTimeout(navigateToDayPage(selectedDate), 500);
   };
 
+  const checkTileVideoCompletion = (date) => {
+    const parsedDataArray = Object.entries(parsedLocalStorageData);
+
+    if (
+      parsedDataArray.find(
+        (object) =>
+          object[1].VIDEO_COMPLETE === true &&
+          date.toLocaleDateString().replaceAll("/", "") === object[0]
+      )
+    ) {
+      return "day-complete";
+    }
+  };
+
   useEffect(() => {
     setCurrentDate(currentDate);
     setInterval(checkTime, 1000);
@@ -49,7 +63,12 @@ const YogaCalendar = () => {
         maxDate={currentDate}
         showFixedNumberOfWeeks={true}
         value={selectedDate}
-        tileClassName={({ date }) => {}}
+        tileClassName={({ date }) => {
+          if (parsedLocalStorageData) {
+            const updatedTile = checkTileVideoCompletion(date);
+            return updatedTile;
+          }
+        }}
       />
     </Wrapper>
   );

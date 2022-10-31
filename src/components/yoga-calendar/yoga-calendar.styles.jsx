@@ -54,22 +54,12 @@ export const Wrapper = styled.div`
 
   .react-calendar__month-view__days__day--neighboringMonth {
     color: #a8a8a8 !important;
-  }
-
-  .react-calendar__month-view__days__day:first-child {
-    border-radius: 0.75rem 0 0 0;
-  }
-
-  .react-calendar__month-view__days__day:last-child {
-    border-radius: 0 0 0.75rem 0;
-  }
-
-  .react-calendar__month-view__days__day:nth-child(7) {
-    border-radius: 0 0.75rem 0 0;
+    border: 2px solid white;
+    border-radius: 0.75rem;
   }
 
   .react-calendar__month-view__days__day:nth-child(36) {
-    border-radius: 0 0 0 0.75rem;
+    border-radius: 0.75rem;
   }
 
   .react-calendar__month-view__days__day {
@@ -87,19 +77,20 @@ export const Wrapper = styled.div`
 
   .react-calendar__tile:enabled:focus {
     background-color: #333;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
   }
 
   .react-calendar__tile:enabled:hover {
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     background-color: #333;
-    color: white;
+    color: white !important;
   }
 
   .react-calendar__tile--now {
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     background: #333;
     color: white;
+    border: 2px solid white;
   }
 
   .react-calendar__tile--active:focus {
@@ -114,7 +105,20 @@ export const Wrapper = styled.div`
     background-color: transparent;
   }
 
+  .react-calendar__month-view__days__day--neighboringMonth.day-complete {
+    color: #333 !important;
+    background-color: RGBA(133, 158, 126, 0.6) !important;
+  }
+
   .day-complete {
     background-color: #859e7e !important;
+    color: white;
+    border-radius: 0.75rem;
+    border: 2px solid white;
+  }
+
+  .react-calendar__tile--now.day-complete {
+    box-sizing: border-box;
+    border: 2px solid #333;
   }
 `;

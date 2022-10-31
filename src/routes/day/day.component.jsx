@@ -3,6 +3,9 @@ import { useParams } from "react-router";
 
 import LocalStorageContext from "../../contexts/local-storage.context";
 
+import videoList from "../../utils/videoList.utils";
+import pickRandomVideo from "../../utils/videoPicker.utils";
+
 import {
   Video,
   AngleLeftIcon,
@@ -19,9 +22,6 @@ import {
   BackButton,
   ButtonLink,
 } from "./day.styles";
-
-import videoList from "../../utils/videoList.utils";
-import pickRandomVideo from "../../utils/videoPicker.utils";
 
 const Day = () => {
   const { day } = useParams();
@@ -42,9 +42,11 @@ const Day = () => {
     setCurrentVideoStatus,
   } = useContext(LocalStorageContext);
 
-  const onVideoEndHandler = () => {
-    setCurrentVideoStatus(true);
-    updateVideoStatus(currentVideoID);
+  const getParsedLocalStorageData = () => {
+    const parsedLocalStorageData = JSON.parse(
+      localStorage.getItem("PAGE_DATA_STORE")
+    );
+    return parsedLocalStorageData;
   };
 
   const updateVideoStatus = (randomVideoID) => {
@@ -53,7 +55,7 @@ const Day = () => {
       ...parsedData,
       [pageDate]: {
         VIDEO_ID: randomVideoID,
-        VIDEO_STATUS: true,
+        VIDEO_COMPLETE: true,
       },
     });
 
@@ -62,20 +64,9 @@ const Day = () => {
     localStorage.setItem("PAGE_DATA_STORE", newPageDataObject);
   };
 
-  //On load (no ID in LS from pageDateID): get data from LS -> set data from LS to pageData -> get random num -> set random num and status -> make new object from data -> set page data to object -> push changes to LS
-
-  //On load (ID in LS from pageDateID) get data from LS ->  set data from LS to pageData -> set corresponding video and status
-
-  const getParsedLocalStorageData = () => {
-    const parsedLocalStorageData = JSON.parse(
-      localStorage.getItem("PAGE_DATA_STORE")
-    );
-    return parsedLocalStorageData;
-  };
-
-  const loadExistingPageData = (parsedData) => {
-    setCurrentVideoID(parsedData[pageDate].VIDEO_ID);
-    setCurrentVideoStatus(parsedData[pageDate].VIDEO_STATUS);
+  const onVideoEndHandler = () => {
+    setCurrentVideoStatus(true);
+    updateVideoStatus(currentVideoID);
   };
 
   const newPageData = (parsedData, randomVideoID) => {
@@ -86,7 +77,7 @@ const Day = () => {
       ...parsedData,
       [pageDate]: {
         VIDEO_ID: randomVideoID,
-        VIDEO_STATUS: false,
+        VIDEO_COMPLETE: false,
       },
     });
 
@@ -100,9 +91,16 @@ const Day = () => {
     console.log("Set local storage");
   };
 
+  const loadExistingPageData = (parsedData) => {
+    setCurrentVideoID(parsedData[pageDate].VIDEO_ID);
+    setCurrentVideoStatus(parsedData[pageDate].VIDEO_COMPLETE);
+  };
+
   useEffect(() => {
     setPageDate(pageDateID);
     setRandomVideo(pickRandomVideo(videoList));
+
+    //eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -118,6 +116,8 @@ const Day = () => {
       console.log("Loading existing data from localStorage");
       loadExistingPageData(parsedLocalStorageData);
     }
+
+    //eslint-disable-next-line
   }, [pageDate]);
 
   return (
