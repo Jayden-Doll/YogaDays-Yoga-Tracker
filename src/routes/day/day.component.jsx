@@ -124,7 +124,7 @@ const Day = () => {
           {currentVideoStatus === true ? (
             <StatusWrapper>
               <CompleteIcon />
-              <Status statusChange="#859e7e">Complete</Status>
+              <Status statusChange="#467838">Complete</Status>
             </StatusWrapper>
           ) : (
             <StatusWrapper>

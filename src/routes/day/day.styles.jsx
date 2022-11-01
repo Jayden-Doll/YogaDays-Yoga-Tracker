@@ -15,7 +15,7 @@ export const IncompleteIcon = styled(FaCalendarTimes)`
 export const CompleteIcon = styled(FaCalendarCheck)`
   width: 1.5rem;
   height: 1.5rem;
-  color: #859e7e;
+  color: #467838;
 `;
 
 export const AngleLeftIcon = styled(FaAngleLeft)`

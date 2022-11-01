@@ -107,11 +107,11 @@ export const Wrapper = styled.div`
 
   .react-calendar__month-view__days__day--neighboringMonth.day-complete {
     color: #333 !important;
-    background-color: RGBA(133, 158, 126, 0.6) !important;
+    background-color: rgba(102, 154, 88, 0.6) !important;
   }
 
   .day-complete {
-    background-color: #859e7e !important;
+    background-color: #669a58 !important;
     color: white;
     border-radius: 0.75rem;
     border: 2px solid white;
