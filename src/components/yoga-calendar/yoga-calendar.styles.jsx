@@ -73,6 +73,8 @@ export const Wrapper = styled.div`
 
   .react-calendar__tile:disabled {
     background-color: #f0f0f0;
+    border: 2px solid white;
+    border-radius: 0.75rem;
   }
 
   .react-calendar__tile:enabled:focus {
