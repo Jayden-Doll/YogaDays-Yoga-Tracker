@@ -18,9 +18,9 @@ export const Wrapper = styled.div`
     border: none;
     border-radius: 1rem;
     user-select: none;
-    box-shadow: 10px 8px 26px 0px rgba(79, 66, 44, 0.49);
-    -webkit-box-shadow: 10px 8px 26px 0px rgba(79, 66, 44, 0.49);
-    -moz-box-shadow: 10px 8px 26px 0px rgba(79, 66, 44, 0.49);
+    box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
+    -webkit-box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
+    -moz-box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
   }
 
   .react-calendar,
