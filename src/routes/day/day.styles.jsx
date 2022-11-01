@@ -26,7 +26,7 @@ export const AngleLeftIcon = styled(FaAngleLeft)`
 
 export const Wrapper = styled.main`
   width: 100%;
-  min-height: calc(100vh - 10.5rem);
+  min-height: calc(100vh - 10.8rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +35,7 @@ export const Wrapper = styled.main`
 `;
 
 export const InfoWrapper = styled.div`
-  min-width: 100%;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -69,6 +69,14 @@ export const VideoContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+
+  @media (max-width: 735px) {
+    width: 50%;
+  }
+  @media (max-width: 535px) {
+  }
+  @media (max-width: 410px) {
+  }
 `;
 
 export const Video = styled(ReactPlayer)`
@@ -79,6 +87,16 @@ export const Video = styled(ReactPlayer)`
   box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
   -webkit-box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
   -moz-box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
+
+  @media (max-width: 735px) {
+    display: flex;
+    min-width: 0%;
+    height: 0%;
+  }
+  @media (max-width: 535px) {
+  }
+  @media (max-width: 410px) {
+  }
 `;
 
 export const ButtonContainer = styled.div`

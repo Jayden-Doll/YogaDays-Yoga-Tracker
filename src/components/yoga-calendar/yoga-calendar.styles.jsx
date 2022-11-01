@@ -21,6 +21,20 @@ export const Wrapper = styled.div`
     box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
     -webkit-box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
     -moz-box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
+
+    @media (max-width: 735px) {
+      width: 450px;
+      padding: 2rem 2rem;
+    }
+
+    @media (max-width: 535px) {
+      width: 350px;
+    }
+
+    @media (max-width: 410px) {
+      width: 250px;
+      padding: 1rem 1rem;
+    }
   }
 
   .react-calendar,
@@ -34,8 +48,37 @@ export const Wrapper = styled.div`
   }
 
   .react-calendar__navigation button {
-    font-size: 2rem;
     border-radius: 0.25rem;
+    text-align: center;
+  }
+
+  .react-calendar__navigation__arrow {
+    font-size: 2rem;
+
+    @media (max-width: 735px) {
+      font-size: 1.75rem;
+    }
+    @media (max-width: 535px) {
+      font-size: 1.5rem;
+    }
+    @media (max-width: 410px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
+    font-size: 2rem;
+
+    @media (max-width: 735px) {
+      font-size: 1.75rem;
+    }
+    @media (max-width: 535px) {
+      font-size: 1.5rem;
+    }
+    @media (max-width: 410px) {
+      font-size: 1.4rem;
+      text-align: center;
+    }
   }
 
   .react-calendar__navigation button:disabled {
@@ -46,6 +89,13 @@ export const Wrapper = styled.div`
     font-size: 1.25rem;
     font-family: "Cormorant Garamond";
     font-weight: 600;
+
+    @media (max-width: 735px) {
+      font-size: 1rem;
+    }
+    @media (max-width: 535px) {
+      font-size: 0.75rem;
+    }
   }
 
   .react-calendar__month-view__days__day--weekend {
