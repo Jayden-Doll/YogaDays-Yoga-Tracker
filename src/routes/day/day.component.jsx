@@ -21,6 +21,9 @@ import {
   ButtonText,
   BackButton,
   ButtonLink,
+  MobilePortraitWarning,
+  MobileContainer,
+  ButtonContainerMobile,
 } from "./day.styles";
 
 const Day = () => {
@@ -119,6 +122,15 @@ const Day = () => {
 
   return (
     <div>
+      <MobileContainer>
+        <MobilePortraitWarning>Please Rotate Your Device</MobilePortraitWarning>
+        <ButtonContainerMobile>
+          <ButtonLink to="/">
+            <AngleLeftIcon />
+            <BackButton>Back to Calendar</BackButton>
+          </ButtonLink>
+        </ButtonContainerMobile>
+      </MobileContainer>
       <Wrapper>
         <InfoWrapper>
           {currentVideoStatus === true ? (

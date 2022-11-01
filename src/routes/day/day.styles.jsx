@@ -32,6 +32,39 @@ export const Wrapper = styled.main`
   align-items: center;
   flex-direction: row;
   flex-direction: column;
+
+  @media (orientation: portrait) and (max-width: 420px) {
+    display: none;
+  }
+`;
+
+export const MobileContainer = styled.div`
+  display: none;
+
+  @media (orientation: portrait) and (max-width: 420px) {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+    text-align: center !important;
+  }
+`;
+
+export const MobilePortraitWarning = styled.p`
+  display: none;
+  color: #333 !important;
+  font-size: 2.5rem;
+
+  @media (orientation: portrait) and (max-width: 420px) {
+    display: block;
+  }
+`;
+
+export const ButtonContainerMobile = styled.div`
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const InfoWrapper = styled.div`
@@ -69,14 +102,6 @@ export const VideoContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-
-  @media (max-width: 735px) {
-    width: 50%;
-  }
-  @media (max-width: 535px) {
-  }
-  @media (max-width: 410px) {
-  }
 `;
 
 export const Video = styled(ReactPlayer)`
@@ -87,16 +112,6 @@ export const Video = styled(ReactPlayer)`
   box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
   -webkit-box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
   -moz-box-shadow: 10px 8px 26px 0px rgba(95, 77, 28, 0.5);
-
-  @media (max-width: 735px) {
-    display: flex;
-    min-width: 0%;
-    height: 0%;
-  }
-  @media (max-width: 535px) {
-  }
-  @media (max-width: 410px) {
-  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -118,6 +133,7 @@ export const BackButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+  color: #333 !important;
 
   :hover {
     text-decoration: 1px underline #333;
@@ -125,8 +141,17 @@ export const BackButton = styled.button`
   }
 `;
 
-export const ButtonText = styled.p``;
+export const ButtonText = styled.p`
+  color: #333 !important;
+`;
 
 export const ButtonLink = styled(Link)`
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row !important;
+
+  @media (max-width: 420px) {
+    justify-content: center;
+  }
 `;

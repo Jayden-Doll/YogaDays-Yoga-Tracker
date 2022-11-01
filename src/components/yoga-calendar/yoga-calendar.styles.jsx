@@ -50,6 +50,8 @@ export const Wrapper = styled.div`
   .react-calendar__navigation button {
     border-radius: 0.25rem;
     text-align: center;
+    overflow: visible;
+    color: #333 !important;
   }
 
   .react-calendar__navigation__arrow {
@@ -63,6 +65,7 @@ export const Wrapper = styled.div`
     }
     @media (max-width: 410px) {
       font-size: 1.4rem;
+      min-width: 30px;
     }
   }
 
@@ -79,6 +82,10 @@ export const Wrapper = styled.div`
       font-size: 1.4rem;
       text-align: center;
     }
+  }
+
+  .react-calendar__navigation__label {
+    min-width: 110px;
   }
 
   .react-calendar__navigation button:disabled {
