@@ -9,10 +9,10 @@ const videoList = [
     videoId: "Ho9em79_0qg",
   },
   {
-    videoId: "5Ju3XvZ6S1Q",
+    videoId: "utrAlZf_Pjs",
   },
   {
-    videoId: "Pz5sO8b9G2o",
+    videoId: "ugXQe5hbUAA",
   },
   {
     videoId: "j7rKKpwdXNE",
