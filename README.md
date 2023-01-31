@@ -2,7 +2,7 @@
 
 Welcome to YogaDays, a simple way to track the progress of your yoga journey without the need for a complicated app or a paid subscription!
 
-<a href="https://yogadays.netlify.app" target="_blank">🧘‍♀️ Check it out here!</a>
+<a href="https://yogadayscalendar.com/" target="_blank">🧘‍♀️ Check it out here!</a>
 
 ---
 
